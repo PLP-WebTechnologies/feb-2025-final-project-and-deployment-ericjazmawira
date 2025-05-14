@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teal Theme Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Teal Theme Blog</h1>
+    <nav>
+      <button onclick="toggleSection('home')">Home</button>
+      <button onclick="toggleSection('about')">About</button>
+      <button onclick="toggleSection('contact')">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Home</h2>
+      <div class="blog-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <article class="blog-post">
+          <h3>Welcome to Our Teal Blog</h3>
+          <p>We share insights on modern web development, design trends, and digital experiences. Stay tuned for valuable tips, tutorials, and industry news.</p>
+          <img src="https://plus.unsplash.com/premium_photo-1661284881881-194fbe3a2e65?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D" alt="Teal banner" class="blog-image" onclick="openImage(this.src)" />
+          <p class="post-meta">Posted on May 14, 2025 by Admin</p>
+        </article>
+        <article class="blog-post">
+          <h3>Designing with Teal</h3>
+          <p>Teal evokes calm, creativity, and clarity. Learn how to apply this color theme across digital interfaces for a refreshing user experience.</p>
+          <img src="https://plus.unsplash.com/premium_photo-1679177183572-a4056053b8a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw%3D" alt="Teal design" class="blog-image" onclick="openImage(this.src)" />
+          <p class="post-meta">Posted on May 12, 2025 by Designer</p>
+        </article>
+        <article class="blog-post">
+          <h3>JavaScript Animation Tips</h3>
+          <p>Bring interactivity to your websites with subtle animations. Discover how animations improve engagement without overwhelming the user.</p>
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Animation" class="blog-image" onclick="openImage(this.src)" />
+          <p class="post-meta">Posted on May 10, 2025 by Developer</p>
+        </article>
+      </div>
+      <button class="animated-btn" onclick="downloadFile()">Download ZIP</button>
+      <button class="animated-btn" onclick="triggerCustomAnimation()">Trigger Animation</button>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Our blog is a space to explore creativity and technology. We discuss everything from frontend frameworks to UX strategy. Our aim is to inspire developers and designers alike.</p>
+      <p>Founded in 2025, the Teal Theme Blog was created by a small group of passionate web designers and developers who believe in sharing ideas, tips, and tutorials in a visually engaging way. We welcome collaboration and encourage creativity in all its forms.</p>
+      <p>We cover topics such as accessibility, responsive design, performance optimization, animation techniques, and how to create inclusive, beautiful, and high-performing digital experiences for all users.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <a href="https://via.placeholder.com/300" target="_blank">
+          <img src="https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbXB1dGVyfGVufDB8fDB8fHww" alt="Placeholder 1" class="animated-img" />
+        </a>
+        <a href="https://via.placeholder.com/300" target="_blank">
+          <img src="https://images.unsplash.com/photo-1510519138101-570d1dca3d66?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbXB1dGVyfGVufDB8fDB8fHww" alt="Placeholder 2" class="animated-img" />
+        </a>
+        <a href="https://via.placeholder.com/300" target="_blank">
+          <img src="https://images.unsplash.com/photo-1636484227625-c659d25dc1b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI1fHx8ZW58MHx8fHx8" alt="Placeholder 3" class="animated-img" />
+        </a>
+        <a href="https://via.placeholder.com/300" target="_blank">
+          <img src="https://images.unsplash.com/photo-1495465798138-718f86d1a4bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" alt="Placeholder 4" class="animated-img" />
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="form-card1">
+        <div class="form-card2">
+          <form class="form">
+            <p class="form-heading">Get In Touch</p>
+            <div class="form-field">
+              <input required placeholder="Name" class="input-field" type="text" />
+            </div>
+            <div class="form-field">
+              <input required placeholder="Email" class="input-field" type="email" />
+            </div>
+            <div class="form-field">
+              <input required placeholder="Subject" class="input-field" type="text" />
+            </div>
+            <div class="form-field">
+              <textarea required placeholder="Message" cols="30" rows="3" class="input-field"></textarea>
+            </div>
+            <button class="sendMessage-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="small-footer">&copy; 2025 Teal Themed Blog. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
